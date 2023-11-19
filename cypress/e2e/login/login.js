@@ -6,7 +6,7 @@ Given('Otwieram strone', () => {
     cy.visit('https://automationexercise.com/'); // Replace with your website URL
     homePage.clickOnLogin()
     cy.pause()
-    homePage.fillI  nput('Name', 'imie')
+    homePage.fillInput('Name', 'imie')
 
 });
 
