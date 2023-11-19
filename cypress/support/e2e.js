@@ -12,13 +12,14 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
+/// <reference types="cypress-xpath" />
 
 // Import commands.js using ES2015 syntax:
 import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
+require('cypress-xpath');
 const cucumber = require('cypress-cucumber-preprocessor').default 
 
 module.exports = (on, config) => {
@@ -26,3 +27,5 @@ module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 
 }
+
+

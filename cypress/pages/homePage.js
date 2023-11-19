@@ -1,3 +1,5 @@
+/// <reference types="cypress-xpath" />
+require('cypress-xpath');
 class homePage {
 
     elements = {
@@ -7,6 +9,12 @@ class homePage {
 
     clickOnLogin() {
         this.elements.login().click()
+    }
+
+    fillInput(label, text) {
+        cy.xpath('//label[text()="' + label + ' "]/following-sibling::input').type(text)
+        // cy.xpath("//input[@name='userName']").should("be.visible");
+
     }
 }
 
